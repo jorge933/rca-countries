@@ -1,0 +1,37 @@
+@import "_reset.scss";
+@import "_vars.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $light-gray;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 40px;
+    background-color: $white;
+    box-shadow: 0 4px 2px -2px $light-black;
+    
+    h1 {
+        font: 800 20px "Fira Sans";
+        color: hsl(200, 15%, 8%);
+    }
+
+    .modes {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        
+        i {
+            margin-right: 10px;
+        }
+
+        font: 400 14px "Poppins";
+    }
+}
