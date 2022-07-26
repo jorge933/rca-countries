@@ -2,6 +2,8 @@ import { SearchBarComponent } from "../../components/search-bar/search-bar.compo
 import { MenuComponent } from "../../components/menu/menu.component";
 import { CountryComponent } from "../../components/country/country.component";
 
+import homeStyles from "./home.page.scss"
+
 export class HomePage extends HTMLElement {
     constructor() {
         super()
@@ -9,6 +11,7 @@ export class HomePage extends HTMLElement {
 
     private readonly declarations = [SearchBarComponent, MenuComponent, CountryComponent]
     connectedCallback() {
+        const styles = homeStyles;
         this.innerHTML = `
         <div class="navigation">
             <rca-search-bar></rca-search-bar>
