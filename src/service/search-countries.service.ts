@@ -15,4 +15,10 @@ export class SearchCountriesService {
         });
     }
 
+    async filterByRegion(region: string, countries : Country[] = undefined) {
+        if(!countries) countries = await this.restCountriesApiService.getAllCountries();
+
+        if(region !== 'Filter By Region')
+        return countries.filter(country => country.region === region);
+    }
 }
