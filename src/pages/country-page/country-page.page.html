@@ -5,43 +5,50 @@
 
 <div class="country">
   <div class="country-flag">
-    <img src="https://flagcdn.com/br.svg" alt="brasil-flag" />
+    <img src="{{ flag }}" alt="{{ name }}-flag" />
   </div>
 
   <div class="country-about">
-    <h1>Brasil</h1>
+    <h1>{{ name }}</h1>
     <div class="infos">
       <span class="country-infos">
         Native Name:
-        <span>Brasil</span>
+        <span>{{ nativeName }}</span>
       </span>
+
       <span class="country-infos">
-        Native Name:
-        <span>Brasil</span>
+        Population
+        <span>{{ maskedPopulation }}</span>
       </span>
+
       <span class="country-infos">
-        Native Name:
-        <span>Brasil</span>
+        Region:
+        <span>{{ region }}</span>
       </span>
+
       <span class="country-infos">
-        Native Name:
-        <span>Brasil</span>
+        Sub Region:
+        <span>{{ subregion }}</span>
       </span>
+
       <span class="country-infos">
-        Native Name:
-        <span>Brasil</span>
+        Capital:
+        <span>{{ capital }}</span>
       </span>
+
       <span class="country-infos">
-        Native Name:
-        <span>Brasil</span>
+        Top Level Domain:
+        <span>{{ topLevelDomain }}</span>
       </span>
+
       <span class="country-infos">
-        Native Name:
-        <span>Brasil</span>
+        Currencies:
+        <span>{{ currency }}</span>
       </span>
+
       <span class="country-infos">
-        Native Name:
-        <span>Brasil</span>
+        Languages:
+        <span>{{ allLangs }}</span>
       </span>
     </div>
     <div class="border-countries">
