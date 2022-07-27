@@ -1,11 +1,13 @@
+import { SearchCountriesService } from "../../service/search-countries.service";
+import { UtilsService } from "../../service/Utils.service";
 import menuTemplate from "./menu.component.html";
 import menuStyles from "./menu.component.scss";
 
-export class MenuComponent extends HTMLElement{
+export class MenuComponent extends HTMLElement {
     constructor() {
-        super()
+        super();
     }
-
+    private searchCountriesService = new SearchCountriesService;
     connectedCallback() {
         const styles = menuStyles;
         this.innerHTML = menuTemplate;
@@ -20,15 +22,29 @@ export class MenuComponent extends HTMLElement{
 
         $options.forEach($option => {
             $option.addEventListener('click', () => {
-                const currentFilter = $selected.firstElementChild.innerHTML;
-                const filter = $option.innerHTML;
-
-                if (currentFilter !== filter) {
-                    $selected.firstElementChild.innerHTML = filter;
-                    this.classList.remove('active');
-                }
+                this.classList.remove('active');
+                this.filterByRegion($selected, $option);
             })
         })
+    }
+
+    private async filterByRegion($selected, $option) {
+        const currentFilter = $selected.firstElementChild.innerHTML;
+        const filter = $option.innerHTML;
+        $selected.firstElementChild.innerHTML = filter;
+
+        if (currentFilter !== filter) {
+
+            let countriesFiltered = await this.searchCountriesService.filterByRegion(filter);
+            const inputValue = this.parentElement.querySelector('input').value;
+
+            if (inputValue) {
+                const filteredByName = await this.searchCountriesService.filterByName(inputValue, countriesFiltered);
+                countriesFiltered = filteredByName;
+            }
+
+            UtilsService.renderCountries(countriesFiltered);
+        }
     }
 }
 
