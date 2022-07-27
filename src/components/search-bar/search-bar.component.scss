@@ -1,43 +1,43 @@
 @import "../../scss/_vars.scss";
 
 rca-search-bar {
-    display: flex;
-    align-items: center;
-    background-color: $white;
-    width: max(30vw, 300px);
-    height: 50px;
-    border-radius: 5px;
-    box-shadow: 0 2px 3px 3px $light-black;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  width: max(30vw, 300px);
+  height: 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px 3px $light-black;
 
-    i {
-        margin: 0 30px;
-        color: $dark-gray;
-        transition: .2s;
+  i {
+    margin: 0 30px;
+    color: $dark-gray;
+    transition: 0.2s;
 
-        &:hover {
-            transform: scale(1.2);
-        }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  input {
+    width: 85%;
+    border: none;
+    background: none;
+    height: 100%;
+    outline: none;
+
+    &::placeholder {
+      position: absolute;
+      top: 50%;
+      transform: translate(-0%, -50%);
+      transition: 0.4s;
     }
 
-    input {
-        width: 85%;
-        border: none;
-        background: none;
-        height: 100%;
-        outline: none;
-
-        &::placeholder {
-            position: absolute;
-            top: 50%;
-            transform: translate(-0%, -50%);
-            transition: .4s;
-        }
-
-        &:focus {
-            &::placeholder {
-                top: 10%;
-                font-size: 10px;
-            }
-        }
+    &:focus {
+      &::placeholder {
+        top: 10%;
+        font-size: 10px;
+      }
     }
+  }
 }

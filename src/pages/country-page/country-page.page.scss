@@ -1,78 +1,78 @@
 @import "../../scss/vars.scss";
 
 .back-button {
-    display: flex;
-    align-items: center;
-    width: min-content;
+  display: flex;
+  align-items: center;
+  width: min-content;
 
-    color: #000;
-    font-family: "Nunito Sans";
-    box-shadow: 0 2px 5px 2px $light-black;
-    background-color: $white;
+  color: #000;
+  font-family: "Nunito Sans";
+  box-shadow: 0 2px 5px 2px $light-black;
+  background-color: $white;
 
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 20px 0 50px 50px;
-    padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 20px 0 50px 50px;
+  padding: 10px 30px;
 
-    i {
-        width: 15px;
-        margin-right: 10px;
-    }
+  i {
+    width: 15px;
+    margin-right: 10px;
+  }
 }
 
 .country {
-    display: flex;
-    margin-left: 50px;
+  display: flex;
+  margin-left: 50px;
 
-    .country-flag {
-        margin-right: 50px;
+  .country-flag {
+    margin-right: 50px;
 
-        img {
-            width: 40vw;
-            height: 30vw;
-            object-fit: cover;
-        }
+    img {
+      width: 40vw;
+      height: 30vw;
+      object-fit: cover;
+    }
+  }
+
+  .country-about {
+    & .infos {
+      display: flex;
+      flex-direction: column;
     }
 
-    .country-about {
-        & .infos {
-            display: flex;
-            flex-direction: column;
-        }
-
-        h1 {
-            font-size: 25px;
-            margin: 20px 0;
-        }
-
-        .infos {
-            height: 50%;
-            padding-bottom: 5%;
-            flex-wrap: wrap;
-
-            span {
-                margin: 10px 100px 5px 0;
-            }
-        }
-
-        .border-countries {
-            display: flex;
-            font-family: "Nunito Sans";
-            align-items: center;
-
-            span {
-                font-weight: 800;
-            }
-
-            div {
-                margin: 0 10px;
-                background-color: $white;
-                width: min-content;
-                padding: 5px 10px;
-                border: 3px solid $light-black;
-                border-radius: 5px;
-            }
-        }
+    h1 {
+      font-size: 25px;
+      margin: 20px 0;
     }
+
+    .infos {
+      height: 50%;
+      padding-bottom: 5%;
+      flex-wrap: wrap;
+
+      span {
+        margin: 10px 100px 5px 0;
+      }
+    }
+
+    .border-countries {
+      display: flex;
+      font-family: "Nunito Sans";
+      align-items: center;
+
+      span {
+        font-weight: 800;
+      }
+
+      div {
+        margin: 0 10px;
+        background-color: $white;
+        width: min-content;
+        padding: 5px 10px;
+        border: 3px solid $light-black;
+        border-radius: 5px;
+      }
+    }
+  }
 }

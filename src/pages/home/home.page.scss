@@ -1,14 +1,14 @@
 .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 40px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 50px;
 }
 
 rca-countries {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 280px);
-    justify-content: space-between;
-    gap: 35px;
-    padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 280px);
+  justify-content: space-between;
+  gap: 35px;
+  padding: 0 40px;
 }

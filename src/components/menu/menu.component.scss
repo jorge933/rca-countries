@@ -1,65 +1,65 @@
 @import "../../scss/_vars.scss";
 
 rca-menu {
+  .selected,
+  .options {
+    width: 180px;
+    border-radius: 5px;
+    background-color: $white;
+    box-shadow: 0 2px 2px 3px $light-black;
+    cursor: pointer;
+  }
 
-    .selected, .options {
-        width: 180px;
-        border-radius: 5px;
-        background-color: $white;
-        box-shadow: 0 2px 2px 3px $light-black;
-        cursor: pointer;
+  .selected {
+    transition: 0.3s;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+
+    &:hover {
+      background-color: $light-gray;
+      border-radius: 5px;
     }
-    
-    .selected {
-        transition: .3s;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 10px;
 
-        &:hover {
-            background-color: $light-gray;
-            border-radius: 5px;
-        }
-        
-        span {
-            font: 500 14px "Poppins";
-            margin-right: 5px;
-        }
-
-        i {
-            transition: .2s;
-            margin-left: 5px;
-        }
-    }
-    
-    .options {
-        margin-top: 10px;
-        position: absolute;
-        display: none;
-        
-        .option {
-            transition: .3s;
-            padding: 10px 0;
-            font: 500 15px "Poppins";
-            padding-left: 20px;
-
-            &:hover {
-                background-color: $light-gray;
-                transform: scale(.8);
-                border-radius: 5px;
-            }
-        }
-    }
-}
-
-rca-menu.active {
-    .options {
-        display: block;
+    span {
+      font: 500 14px "Poppins";
+      margin-right: 5px;
     }
 
     i {
-        transform: rotate(180deg);
+      transition: 0.2s;
+      margin-left: 5px;
     }
+  }
+
+  .options {
+    margin-top: 10px;
+    position: absolute;
+    display: none;
+
+    .option {
+      transition: 0.3s;
+      padding: 10px 0;
+      font: 500 15px "Poppins";
+      padding-left: 20px;
+
+      &:hover {
+        background-color: $light-gray;
+        transform: scale(0.8);
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+rca-menu.active {
+  .options {
+    display: block;
+  }
+
+  i {
+    transform: rotate(180deg);
+  }
 }

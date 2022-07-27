@@ -15,10 +15,10 @@ class SinglePageApplication {
   }
 
   renderPage() {
-    $main.innerHTML = '';
+    $main.innerHTML = "";
     const hashedRoute = window.location.hash;
     const targetRoute = this.getTargetRoute(hashedRoute);
-    const [fragment, param] = targetRoute.split('/');
+    const [fragment, param] = targetRoute.split("/");
     const hasParam = !!param;
     const page = hasParam ? ROUTES[fragment](param) : ROUTES[fragment]();
     $main.appendChild(page);
@@ -29,10 +29,10 @@ class SinglePageApplication {
   }
 
   windowLoadListener() {
-    window.addEventListener('load', () => {
+    window.addEventListener("load", () => {
       this.renderPage();
       this.hashListener();
-    })
+    });
   }
 }
 

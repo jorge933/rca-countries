@@ -1,16 +1,8 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "lib": [
-            "es2017",
-            "dom"
-        ]
-    },
-    "typeRoots": [
-        "node_modules/@types",
-        "../src/typings.d.ts"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": ["es2017", "dom"]
+  },
+  "typeRoots": ["node_modules/@types", "../src/typings.d.ts"],
+  "exclude": ["node_modules"]
 }
