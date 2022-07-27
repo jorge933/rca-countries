@@ -4,6 +4,7 @@ import { CountryComponent } from "../../components/country/country.component";
 
 import homeStyles from "./home.page.scss"
 import { RestCountriesApiService } from "../../service/rest-countries-api.service";
+import { UtilsService } from "../../service/Utils.service";
 
 export class HomePage extends HTMLElement {
     constructor() {
@@ -21,16 +22,9 @@ export class HomePage extends HTMLElement {
         </div>
         <rca-countries></rca-countries>
         `;
-
-        const $container = this.querySelector('rca-countries');
         
         this.restCountriesApiService.getAllCountries().then(countries => {
-            countries.forEach(country => {                
-                const $country = document.createElement('rca-country');
-                const countryStringify = JSON.stringify(country)
-                $country.setAttribute('country-informations', countryStringify);
-                $container.appendChild($country)
-            });
+            UtilsService.renderCountries(countries);
         })
         
     }
