@@ -10,10 +10,10 @@ export class CountryComponent extends HTMLElement {
     connectedCallback() {
         const styles = countryStyles;
         const countryInformations = this.getAttribute('country-informations');
-        const {flags, name, population, region, capital} = JSON.parse(countryInformations);
+        const {flags, name, population, region, capital, cca2} = JSON.parse(countryInformations);
         const maskedPopulation = population.toLocaleString()
 
-        this.innerHTML = UtilsService.bindModelToView(countryTemplate, {flag: flags.svg, name: name.common, population: maskedPopulation, region, capital});
+        this.innerHTML = UtilsService.bindModelToView(countryTemplate, {flag: flags.svg, name: name.common, population: maskedPopulation, region, capital, cca2});
 
         this.removeAttribute('country-informations');
         
