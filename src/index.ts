@@ -3,6 +3,7 @@ import { ROUTES } from "./constants/routes";
 
 class SinglePageApplication {
   constructor() {
+    this.renderPage = this.renderPage.bind(this);
     this.renderPage();
     this.hashListener();
     this.windowLoadListener();
