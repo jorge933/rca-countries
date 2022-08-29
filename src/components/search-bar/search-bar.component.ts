@@ -34,10 +34,8 @@ export class SearchBarComponent extends HTMLElement {
           filter,
           filteredByName
         );
-      console.log(countriesFiltered);
 
       filteredByName = countriesFiltered;
-      console.log(filteredByName);
     }
 
     UtilsService.renderCountries(filteredByName);

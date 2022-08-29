@@ -16,7 +16,6 @@ export class CountryPage extends HTMLElement {
     const countryCode = this.getAttribute("country-code");
 
     const country = await this.restCountriesApiService.getCountry(countryCode);
-    console.log(country);
     const {
       flags,
       name,
