@@ -11,4 +11,9 @@ rca-countries {
   justify-content: space-between;
   gap: 35px;
   padding: 0 40px;
+
+  .no-countries {
+    font-family: "Poppins";
+    color: var(--text);
+  }
 }

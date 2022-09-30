@@ -1,4 +1,14 @@
-$white: #fff;
-$light-gray: hsl(0, 0%, 98%);
-$light-black: #00000015;
-$dark-gray: hsl(0, 0%, 52%);
+$light-mode: (
+  "white": #fff,
+  "text": #000,
+  "background": hsl(0, 0%, 98%),
+  "light-black": #00000015,
+  "secondary": hsl(0, 0%, 52%),
+);
+
+$dark-mode: (
+  "background": hsl(209, 23%, 22%),
+  "secondary": hsl(207, 26%, 17%),
+  "white": hsl(207, 26%, 17%),
+  "text": #fff,
+);

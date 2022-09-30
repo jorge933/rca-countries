@@ -5,10 +5,10 @@
   align-items: center;
   width: min-content;
 
-  color: #000;
+  color: var(--text);
   font-family: "Nunito Sans";
-  box-shadow: 0 2px 5px 2px $light-black;
-  background-color: $white;
+  box-shadow: 0 2px 5px 2px var(--light-black);
+  background-color: var(--white);
 
   text-decoration: none;
   border-radius: 5px;
@@ -44,6 +44,7 @@
     h1 {
       font-size: 25px;
       margin: 20px 0;
+      color: var(--text);
     }
 
     .infos {
@@ -67,11 +68,12 @@
 
       div {
         margin: 0 10px;
-        background-color: $white;
+        background-color: var(--white);
         width: min-content;
         padding: 5px 10px;
-        border: 3px solid $light-black;
+        border: 3px solid var(--light-black);
         border-radius: 5px;
+        color: var(--text);
       }
     }
   }

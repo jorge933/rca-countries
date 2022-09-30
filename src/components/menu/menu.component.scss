@@ -5,8 +5,8 @@ rca-menu {
   .options {
     width: 180px;
     border-radius: 5px;
-    background-color: $white;
-    box-shadow: 0 2px 2px 3px $light-black;
+    background-color: var(--white);
+    box-shadow: 0 2px 2px 3px var(--light-black);
     cursor: pointer;
   }
 
@@ -19,7 +19,7 @@ rca-menu {
     padding: 0 10px;
 
     &:hover {
-      background-color: $light-gray;
+      background-color: var(--background);
       border-radius: 5px;
     }
 
@@ -31,6 +31,7 @@ rca-menu {
     i {
       transition: 0.2s;
       margin-left: 5px;
+      color: var(--text);
     }
   }
 
@@ -44,9 +45,10 @@ rca-menu {
       padding: 10px 0;
       font: 500 15px "Poppins";
       padding-left: 20px;
+      color: var(--text);
 
       &:hover {
-        background-color: $light-gray;
+        background-color: #aeb4b9;
         transform: scale(0.8);
         border-radius: 5px;
       }

@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: $light-gray;
+  background-color: var(--background);
 }
 
 header {
@@ -15,12 +15,12 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 25px 40px;
-  background-color: $white;
-  box-shadow: 0 4px 2px -2px $light-black;
+  background-color: var(--white);
+  box-shadow: 0 4px 2px -2px var(--light-black);
 
   h1 {
     font: 800 20px "Fira Sans";
-    color: hsl(200, 15%, 8%);
+    color: var(--text);
   }
 
   .modes {
@@ -30,6 +30,7 @@ header {
 
     i {
       margin-right: 10px;
+      color: var(--text);
     }
 
     font: 400 14px "Poppins";
@@ -42,5 +43,20 @@ header {
 
   span {
     font-weight: 300;
+  }
+}
+
+span {
+  color: var(--text);
+}
+
+:root {
+  @each $name, $color in $light-mode {
+    --#{$name}: #{$color};
+  }
+  .dark {
+    @each $name, $color in $dark-mode {
+      --#{$name}: #{$color};
+    }
   }
 }

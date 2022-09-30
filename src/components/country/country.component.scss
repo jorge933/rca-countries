@@ -1,9 +1,8 @@
-@import "../../scss/_vars.scss";
-
 rca-country {
   width: 250px;
-  box-shadow: 0 2px 2px 3px $light-black;
+  box-shadow: 0 2px 2px 3px var(--light-black);
   border-radius: 5px;
+  background-color: var(--white);
 
   img {
     width: 250px;
@@ -13,7 +12,7 @@ rca-country {
   }
 
   a {
-    color: black;
+    color: var(--text);
     text-decoration: none;
 
     .infos {
