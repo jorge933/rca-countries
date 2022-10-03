@@ -29,5 +29,7 @@ export class SearchCountriesService {
 
     if (region !== "Filter By Region")
       return countries.filter((country) => country.region === region);
+
+    return countries;
   }
 }
