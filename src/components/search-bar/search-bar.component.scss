@@ -25,6 +25,7 @@ rca-search-bar {
     background: none;
     height: 100%;
     outline: none;
+    color: var(--text);
 
     &::placeholder {
       position: absolute;

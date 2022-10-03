@@ -20,10 +20,10 @@ export class HomePage extends HTMLElement {
   connectedCallback() {
     const styles = homeStyles;
     this.innerHTML = `
-        <div class="navigation">
+        <nav class="navigation">
             <rca-search-bar></rca-search-bar>
             <rca-menu></rca-menu>
-        </div>
+        </nav>
         <rca-countries></rca-countries>
         `;
 

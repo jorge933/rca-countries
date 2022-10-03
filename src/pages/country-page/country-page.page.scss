@@ -24,6 +24,7 @@
 .country {
   display: flex;
   margin-left: 50px;
+  flex-wrap: wrap;
 
   .country-flag {
     margin-right: 50px;
@@ -84,4 +85,34 @@
   padding: 20% 0;
   font: 600 23px "Poppins";
   color: var(--text);
+}
+
+@media (max-width: 675px) {
+  .country {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+
+    .country-flag {
+      margin: auto;
+    }
+
+    .country-about {
+      margin: auto;
+
+      h1 {
+        text-align: center;
+      }
+
+      .infos {
+        justify-content: center;
+        text-align: center;
+
+        span {
+          margin: 0;
+        }
+      }
+    }
+  }
 }

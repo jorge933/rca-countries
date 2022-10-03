@@ -60,3 +60,11 @@ span {
     }
   }
 }
+
+@media (max-width: 360px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}

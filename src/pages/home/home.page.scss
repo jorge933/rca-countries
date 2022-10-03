@@ -17,3 +17,24 @@ rca-countries {
     color: var(--text);
   }
 }
+
+@media (max-width: 675px) {
+  rca-countries {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 570px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    align-items: center !important;
+
+    rca-search-bar {
+      margin: 20px 0;
+    }
+  }
+}
