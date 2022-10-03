@@ -2,7 +2,7 @@
   "name": "rca-countries",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.html",
   "scripts": {
     "start": "parcel src/index.html"
   },
@@ -11,7 +11,7 @@
   "dependencies": {
     "@babel/core": "^7.16.0",
     "parcel": "^2.6.2",
-    "typescript": "^4.5.4"
+    "typescript-plugin-css-modules": "^3.4.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.1",
