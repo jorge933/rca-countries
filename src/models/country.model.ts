@@ -24,3 +24,7 @@ interface Name {
   common: string;
   nativeName: string;
 }
+
+export interface BadRequest {
+  message: string;
+}

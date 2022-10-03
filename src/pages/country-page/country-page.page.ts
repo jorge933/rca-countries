@@ -17,6 +17,11 @@ export class CountryPage extends HTMLElement {
 
     const country = await this.restCountriesApiService.getCountry(countryCode!);
 
+    if (country.message) {
+      this.innerHTML = "<p class='no-country'>No country searched</p>";
+      return;
+    }
+
     const {
       flags,
       name,
