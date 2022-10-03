@@ -4,7 +4,7 @@ export class StorageService {
     return item;
   }
 
-  static setItem(key: string, object) {
+  static setItem(key: string, object: string) {
     localStorage.setItem(key, object);
   }
 }

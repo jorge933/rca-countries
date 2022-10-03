@@ -15,38 +15,46 @@ export class MenuComponent extends HTMLElement {
     const $selected = this.querySelector(".selected");
     const $options = this.querySelectorAll(".option");
 
-    $selected.addEventListener("click", () => {
-      const classList = this.classList.value;
-      classList.includes("active")
-        ? this.classList.remove("active")
-        : this.classList.add("active");
+    $selected!.addEventListener("click", () => {
+      this.classList.toggle("active");
     });
 
     $options.forEach(($option) => {
       $option.addEventListener("click", () => {
         this.classList.remove("active");
-        this.filterByRegion($selected, $option);
+        this.filterByRegion($selected!, $option);
       });
     });
   }
 
-  private async filterByRegion($selected, $option) {
-    const currentFilter = $selected.firstElementChild.innerHTML;
-    const filter = $option.innerHTML;
-    $selected.firstElementChild.innerHTML = filter;
+  private async filterByRegion(
+    $selected: Element,
+    $option: Element
+  ): Promise<void> {
+    const currentFilter = $selected!.firstElementChild!.innerHTML;
+    const selectedFilter = $option.innerHTML;
+    $selected!.firstElementChild!.innerHTML = selectedFilter;
 
-    if (currentFilter !== filter) {
+    if (currentFilter !== selectedFilter) {
       let countriesFiltered = await this.searchCountriesService.filterByRegion(
-        filter
+        selectedFilter
       );
-      const inputValue = this.parentElement.querySelector("input").value;
+      const value = this.parentElement?.querySelector("input")?.value;
 
-      if (inputValue) {
+      if (value) {
         const filteredByName = await this.searchCountriesService.filterByName(
-          inputValue,
+          value,
           countriesFiltered
         );
         countriesFiltered = filteredByName;
+      }
+
+      if (!countriesFiltered?.length) {
+        const $container = document.querySelector("rca-countries");
+        $container!.innerHTML = "";
+        $container!.innerHTML =
+          "<p class='no-countries'>No Countries Searched</p>";
+        return;
       }
 
       UtilsService.renderCountries(countriesFiltered);

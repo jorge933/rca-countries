@@ -1,3 +1,4 @@
+import { Country } from "models/country.model";
 import { SearchCountriesService } from "../../service/search-countries.service";
 import { UtilsService } from "../../service/Utils.service";
 import searchBarTemplate from "./search-bar.component.html";
@@ -16,26 +17,35 @@ export class SearchBarComponent extends HTMLElement {
 
     const $input = this.querySelector("input");
 
-    $input.addEventListener("input", (event) => {
+    $input!.addEventListener("input", (event) => {
       this.filterByName(event);
     });
   }
 
-  private async filterByName(event: Event) {
-    const filter = document.querySelector(".selected span").innerHTML;
+  private async filterByName(event: Event): Promise<void> {
+    const filter = document.querySelector(".selected span")?.innerHTML;
     const target = event.target as HTMLTextAreaElement;
     const value = target.value.toLowerCase();
 
-    let filteredByName = await this.searchCountriesService.filterByName(value);
+    let filteredByName: Country[] | undefined =
+      await this.searchCountriesService.filterByName(value);
 
     if (filter !== "Filter By Region") {
       const countriesFiltered =
         await this.searchCountriesService.filterByRegion(
-          filter,
+          filter!,
           filteredByName
         );
 
       filteredByName = countriesFiltered;
+    }
+
+    if (!filteredByName!.length) {
+      const $container = document.querySelector("rca-countries");
+      $container!.innerHTML = "";
+      $container!.innerHTML =
+        "<p class='no-countries'>No Countries Searched</p>";
+      return;
     }
 
     UtilsService.renderCountries(filteredByName);

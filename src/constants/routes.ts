@@ -4,9 +4,9 @@ import { HomePage } from "../pages/home/home.page";
 const declarations = [HomePage, CountryPage];
 
 const home = () => document.createElement("rca-home");
-const country = (params: string) => {
+const country = (params?: string) => {
   const $countryPage = document.createElement("rca-country-page");
-  $countryPage.setAttribute("country-code", params);
+  $countryPage.setAttribute("country-code", params!);
   return $countryPage;
 };
 

@@ -17,7 +17,7 @@ export interface Currency {
 }
 
 export interface NativeName {
-  common: string;
+  common: string | string[];
 }
 
 interface Name {

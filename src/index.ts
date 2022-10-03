@@ -2,14 +2,13 @@ const $main = document.querySelector("#root");
 const $changeTheme = document.querySelector(".modes");
 const $body = document.body;
 import { ROUTES } from "./constants/routes";
+import { RoutesType } from "./models/types.model";
 import { StorageService } from "./service/storage.service";
 class SinglePageApplication {
   currentMode: string | null;
   constructor() {
     this.currentMode = StorageService.getItem("mode") || "light";
     this.renderPage = this.renderPage.bind(this);
-    this.renderPage();
-    this.hashListener();
     this.windowLoadListener();
     this.initTheme();
   }
@@ -20,13 +19,16 @@ class SinglePageApplication {
   }
 
   renderPage() {
-    $main.innerHTML = "";
+    $main!.innerHTML = "";
     const hashedRoute = window.location.hash;
     const targetRoute = this.getTargetRoute(hashedRoute);
-    const [fragment, param] = targetRoute.split("/");
+    const routeAndParams = targetRoute.split("/");
+    const fragment = routeAndParams[0] as keyof RoutesType;
+    const param: string = routeAndParams[1];
     const hasParam = !!param;
     const page = hasParam ? ROUTES[fragment](param) : ROUTES[fragment]();
-    $main.appendChild(page);
+    $main!.appendChild(page);
+    $changeTheme?.addEventListener("click", this.changeTheme);
   }
 
   hashListener() {
@@ -39,6 +41,7 @@ class SinglePageApplication {
       this.hashListener();
     });
   }
+
   changeTheme() {
     if (this.currentMode === undefined) {
       this.currentMode = StorageService.getItem("mode");

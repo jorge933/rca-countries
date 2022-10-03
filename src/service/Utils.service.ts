@@ -13,16 +13,16 @@ export class UtilsService {
     return newTemplate;
   }
 
-  static renderCountries(countries: Country[]) {
+  static renderCountries(countries: Country[] | undefined) {
     const $container = document.querySelector("rca-countries");
-    $container.innerHTML = "";
+    $container!.innerHTML = "";
 
-    countries.forEach((country) => {
+    countries!.forEach((country) => {
       const $country = document.createElement("rca-country");
       const countryStringify = JSON.stringify(country);
       $country.setAttribute("country-informations", countryStringify);
 
-      $container.appendChild($country);
+      $container!.appendChild($country);
     });
   }
 }

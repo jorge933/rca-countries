@@ -1,5 +1,5 @@
 import { StorageService } from "./storage.service";
-import { Country } from "../models/country.model";
+import { BadRequest, Country } from "../models/country.model";
 
 export class RestCountriesApiService {
   async getAllCountries(): Promise<Country[]> {
@@ -18,7 +18,7 @@ export class RestCountriesApiService {
     return countriesArray;
   }
 
-  async getCountry(countryCode): Promise<Country> {
+  async getCountry(countryCode: string): Promise<Country[] & BadRequest> {
     const countryInStorage = StorageService.getItem(countryCode);
 
     if (!countryInStorage) {

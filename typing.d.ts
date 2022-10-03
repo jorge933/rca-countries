@@ -3,8 +3,8 @@ declare module "*.html" {
   export default value;
 }
 declare module "*.scss" {
-  const value: { [className: string]: string };
-  export default value;
+  const classes: { readonly [key: string]: string };
+  export default classes;
 }
 declare module "*.png" {
   const value: string;
