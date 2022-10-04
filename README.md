@@ -14,7 +14,7 @@
   <img alt="Top Language" src="https://img.shields.io/github/languages/top/jorge933/rca-countries?color=3498db&style=for-the-badge">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jorge933/rca-countries?color=3498db&style=for-the-badge&label=Ultimo%20Commit">   
   <a href="https://github.com/jorge933">
-    <img alt="Developed by João Vitor" src="https://img.shields.io/badge/Developer-Jorge_Vitor-%3498db?color=3498db&style=for-the-badge&label=Desenvolvedor">
+    <img alt="Developed by Jorge Vitor" src="https://img.shields.io/badge/Developer-Jorge_Vitor-%3498db?color=3498db&style=for-the-badge&label=Desenvolvedor">
   </a>  
   <img alt="Project License" src="https://img.shields.io/apm/l/vim-mode?style=for-the-badge&label=licen%C3%A7a"/>   
    <img alt="Project Status" src="https://camo.githubusercontent.com/e1242aef6552b4e9b2d6764e66eb55f29758cb1e6d332b74efa89b3144339b25/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6e636c75c3ad646f2d253334393864623f636f6c6f723d677265656e267374796c653d666f722d7468652d6261646765266c6162656c3d537461747573">  
@@ -154,10 +154,10 @@ $ yarn start
 <a href="https://github.com/jorge933">
  <img src="https://github.com/jorge933.png"  width="100px;" alt="Profile Photo Jorge Vitor"/>
  <br/>
- <sub><b>João Vitor Pereira dos Santos</b></sub>
+ <sub><b>Jorge Vitor Pimentel</b></sub>
 </a>
 
-Desenvolvido com ❤️ por João Vitor Pereira dos Santos 👋🏽 Meus Contatos!
+Desenvolvido com ❤️ por Jorge Vitor Pereira dos Santos 👋🏽 Meus Contatos!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Jorge_Vitor-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/jorge-vitor-7192b2210/)
 [![Github Badge](https://img.shields.io/badge/-Jorge_Vitor-000?style=flat-square&logo=Github&logoColor=white)](https://github.com/jorge933)
