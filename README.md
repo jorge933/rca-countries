@@ -1,6 +1,6 @@
 <div align="right">
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e3c52228-d2d0-4ecd-a86e-d5663fc30ca7/deploy-status)](https://joaovitorsw-rest-countries-api-with-color-theme-switcher.netlify.app/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e3c52228-d2d0-4ecd-a86e-d5663fc30ca7/deploy-status)](https://rca-countries-jorgev.netlify.app/)
 
 </div>
 
@@ -13,7 +13,7 @@
 <p align="center"> 
   <img alt="Top Language" src="https://img.shields.io/github/languages/top/jorge933/rca-countries?color=3498db&style=for-the-badge">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jorge933/rca-countries?color=3498db&style=for-the-badge&label=Ultimo%20Commit">   
-  <a href="https://github.com/Joaovitorsw">
+  <a href="https://github.com/jorge933">
     <img alt="Developed by João Vitor" src="https://img.shields.io/badge/Developer-Jorge_Vitor-%3498db?color=3498db&style=for-the-badge&label=Desenvolvedor">
   </a>  
   <img alt="Project License" src="https://img.shields.io/apm/l/vim-mode?style=for-the-badge&label=licen%C3%A7a"/>   
@@ -39,7 +39,7 @@
 
 <div align="center">
 
-Deploy do front-end efetuado no [Netlify](https://www.netlify.com/) para visualizar: [Clique Aqui](https://joaovitorsw-rest-countries-api-with-color-theme-switcher.netlify.app/)
+Deploy do front-end efetuado no [Netlify](https://www.netlify.com/) para visualizar: [Clique Aqui](https://rca-countries-jorgev.netlify.app/)
 
 |                             :computer:Desktop                             |                             :iphone: Mobile                              |
 | :-----------------------------------------------------------------------: | :----------------------------------------------------------------------: |
