@@ -2,20 +2,20 @@
   "name": "rca-countries",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.html",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build ./src/index.html --detailed-report"
+    "build": "parcel build src/index.html --reporter @parcel/reporter-bundle-analyzer --no-cache"
   },
   "author": "Jorge Vitor",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.16.0",
-    "parcel": "^2.6.2",
+    "parcel": "^2.7.0",
     "typescript-plugin-css-modules": "^3.4.0"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.1",
+    "@parcel/reporter-bundle-analyzer": "^2.7.0",
+    "@parcel/transformer-sass": "^2.7.0",
     "babel-plugin-transform-html-import-to-string": "^2.0.0"
   }
 }
