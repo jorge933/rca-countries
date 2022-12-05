@@ -157,7 +157,7 @@ $ yarn start
  <sub><b>Jorge Vitor Pimentel</b></sub>
 </a>
 
-Desenvolvido com ❤️ por Jorge Vitor Pereira dos Santos 👋🏽 Meus Contatos!
+Desenvolvido com ❤️ por Jorge Vitor 👋🏽 Meus Contatos!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Jorge_Vitor-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/jorge-vitor-7192b2210/)
 [![Github Badge](https://img.shields.io/badge/-Jorge_Vitor-000?style=flat-square&logo=Github&logoColor=white)](https://github.com/jorge933)
